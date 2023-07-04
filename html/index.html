@@ -2,35 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The GUIDON Interactive Articles</title>
 </head>
 <body>
-    <header>
-        <!-- main header section -->
-        <div>
-            <!-- header wrapper; flex -->
-            <div>
+    <div class="bg-wrapper">
+        <div class="img-wrapper"></div>
+        <div class="overlay"></div>
+    </div>
+    <!-- main header section -->
+    <header class="header-section">
+
+        <!-- header wrapper; flex -->
+        <div class="center-wrapper">
+
+            <!-- left-side flex child -->
+            <div class="left-side">
                 <!-- left-side flex child -->
-                <H1>Hello</H1>
+                <a id="logo-wrapper" href="#">
+                    <img src="./guidon-logo.png" alt="guidon-logo">
+                </a>
             </div>
-            <nav>
-                <!-- navigation buttons; home, about, theguidon -->
+
+            <!-- right side flex child -->
+            <!-- navigation buttons; home, about, theguidon -->
+            <nav class="right-side" id="nav-wrapper">
+                <a class="nav-link">Home</a>
+                <a class="nav-link">About</a>
+                <a class="nav-link">TheGuidon.com</a>
             </nav>
         </div>
     </header>
-    <section>
-        <!-- section -->
-        <div>
-            <!-- center wrapper -->
-            <div> 
-                <!-- interactives wrapper; flex -->
-                <a>
-                    <div>
-                        <!-- img -->
-                    </div>
-                    <div>
-                        <!-- title -->
+    <!-- section -->
+    <section class="content-wrapper">
+        <!-- center wrapper -->
+        <div class="center-wrapper">
+            <!-- interactives wrapper; flex -->
+            <div class="interactive-card-wrapper"> 
+                <!-- card-item -->
+                <a class="card-item" href="#">
+                    <!-- img -->
+                    <div class="card-img"></div>
+                    <!-- title -->
+                    <div class="info">
+                        <div class="text">Placeholder Text Here</div>
                     </div>
                 </a>
             </div>
