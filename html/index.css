@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo&family=Open+Sans&family=Roboto&family=Viga&display=swap');
+
+*{
+    box-sizing: border-box;
+    position: relative;
+}
+
+body, html{
+    font-size: 15px;
+    background-color: #0a0a0a;
+    color: white;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: "Roboto", "Chivo", "Helvetica", sans-serif;
+}
+.bg-wrapper {
+    z-index: 2;
+}
+
+.bg-wrapper, .bg-wrapper .img-wrapper, .bg-wrapper .overlay{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-wrapper .img-wrapper{
+    z-index: 0;
+    background-color: #1C4480;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+.bg-wrapper .overlay{
+    z-index: 1;
+    background-image: linear-gradient(170deg, rgba(10, 10, 10, 0.4) 0%, #0a0a0a 60%, #0a0a0a 100%);
+}
+.header-section{
+    z-index: 100;
+}
+.center-wrapper {
+    display: flex;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-section .center-wrapper{
+    width: 90%;
+    margin: auto;
+}
+
+.header-section .center-wrapper .left-side #logo-wrapper img{
+    height: auto;
+    max-width: 25em;
+    width: 100%;
+}
+
+.header-section .center-wrapper #nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 20em;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.header-section .center-wrapper #nav-wrapper .nav-link {
+    font-family: "Chivo", "Roboto", "Helvetica", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9em;
+    opacity: 0.75;
+}
+
+
+.header-section .center-wrapper #nav-wrapper .nav-link:hover {
+    opacity: 1;
+}
+
+@media screen and (min-width: 0) and (max-width: 899px) {
+    .header-section .center-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+    .header-section .center-wrapper .left-side{
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    .header-section .center-wrapper .left-side #logo-wrapper img{
+        width: 100%;
+        height: auto;
+    }
+
+    .header-section .center-wrapper #nav-wrapper {
+        padding-top: 0.5em;
+        max-width: 15em;
+    }
+    .header-section .center-wrapper #nav-wrapper .nav-link{
+        font-size: 0.8em;
+    }
+}
+
+.content-wrapper {
+    z-index: 100;
+}
+
+.content-wrapper .center-wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+.interactive-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-self: flex-start;
+    padding-bottom: 3em;
+}
+
+.interactive-card-wrapper .card-item {
+    text-decoration: none;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+@media screen and (min-width: 2090px) {
+    .interactive-card-wrapper .card-item {
+        width: calc(20% - 16px);
+    }
+}
+
+
+@media screen and (min-width: 1470px) and (max-width: 2089px){
+    .interactive-card-wrapper .card-item {
+        width: calc(25% - 15px);
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1469px) {
+    .interactive-card-wrapper .card-item {
+        width: calc(33.3333333333% - 13.3333333333px);
+    }
+}
+
+@media screen and (min-width: 620px) and (max-width: 999px){
+    .interactive-card-wrapper .card-item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 619px){
+    .interactive-card-wrapper .card-item {
+        width: 100%;
+    }
+}
+
+.interactive-card-wrapper .card-item .card-img {
+    width: 100%;
+    padding-bottom: 50%;
+    display: block;
+    border-radius: 10px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e;
+    background-image: url(https://interactive.theguidon.com/2023/05/dead-end/thumbnail.png);
+}
+
+.interactive-card-wrapper .card-item .info{
+    text-align: center;
+}
+
+.interactive-card-wrapper .card-item .info .text{
+    width: 80%;
+    max-width: 80%;
+    opacity: 0.5;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 2.5em;
+    font-size: 0.9em;
+}
+
+.interactive-card-wrapper .card-item .info,
+.interactive-card-wrapper .card-item .info .text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
